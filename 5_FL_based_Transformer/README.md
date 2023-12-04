@@ -1,5 +1,12 @@
-# Federated Learning 
-## Mango_2
+# FL_based_Transformer
+
+Was able to be Implemented on the flwr framework, but only for univariate time series, Unfortunately.
+
+In addition, when looking at the result graph, meaningful values were not predicted at all. similar results come from learning by changing hyperparameters.
+
+The reason that we think prediction of many steps is repeated enough to predict the result one value at a time in the decoder
+we thought that the prediction of many steps is repeatedly not being able to learn enough data to predict the result one step value at a time in the decoder.
+In order to improve the results, it is not repeatedly predicting the results one step at a time in the decoder, but is proceeding with a model that predicts all results at once by connecting FC layers at the output of the transformer encoder.
 
 [Appendix]
 
