@@ -1,4 +1,4 @@
-# Vertical_Federated_Learning
+# Vertical_Federated_Learning in flwr framework
 - Purpose for study. <br>
 
 
@@ -41,12 +41,24 @@ Server에서의 Model Parameter(Global model Params)를 evaluate한다.
 
 - Vanilla SplitNN과 크게 다르지 않으나, Output을 출력하는 층에서 각 Client가 Worker을 거친 결과(Signal)을 병합하여 feed를 수행하는 점에서 차이가 존재한다.
 
-- 여기서 Worker는 학습을 수행할 수 있는 환경을 말하는 듯. <br>
-Vertically Partitioned Data의 소유자를 Client라 하고, <br> 
-Output을 담당하는 하단 네트워크를 N개의 Segment로 분할하였다면, <br>
-Worker의 수 = Client의 수 + N으로 볼 수 있음. 
+- Worker는 학습을 수행할 수 있는 환경을 뜻한다. <br>
+Vertically Partitioned Data의 소유자를 Client라 하고, Output을 담당하는 하단 네트워크를 N개의 Segment로 분할하였다면, Worker의 수 = Client의 수 + N으로 볼 수 있다.
 
 
+### 연구 소개
+Dataset : https://www.kaggle.com/competitions/acquire-valued-shoppers-challenge/data   
+Target : repeater - A boolean, If repeat purchase=1 else 0    
+Model : DNN(Relu + Sigmoid)   
+Client : 3 (Brand, Category, Company)   
+Client Assumed : Vertically partition   
+data-Brand : Feature(brand, chain), Target(repeater)   
+data-Category : Feature(category, dept), Target(repeater)   
+data-Brand : Feature(company, productsize, purhcasequantity, purchaseamount), Target(repeater)   
+<img src = "https://github.com/SS-yong/Federated-Learning/assets/108441950/41c61c0f-a09c-481d-bf1b-3d9da4a4828e" width="300" height="50">
+
+Strategy : SplitVFL(Vertical SplitNN)   
+Epoch : 10   
+Loss function : BCELoss   
 
 
 
