@@ -62,4 +62,7 @@ Loss function : BCELoss
 
 - **Success for Binary Classification, But Fail to Multi-Classification**
 
+![image](https://github.com/SS-yong/Federated-Learning/assets/108441950/2c15dc99-890c-4b6c-963e-d8bb94f81724)
+
+
 Reference from "https://github.com/Pedja-Djape/VFL_Kaggle_AVSC/tree/main"
