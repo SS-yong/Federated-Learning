@@ -60,6 +60,6 @@ Strategy : SplitVFL(Vertical SplitNN)
 Epoch : 10   
 Loss function : BCELoss   
 
-
+- **Success for Binary Classification, But Fail to Multi-Classification**
 
 Reference from "https://github.com/Pedja-Djape/VFL_Kaggle_AVSC/tree/main"
