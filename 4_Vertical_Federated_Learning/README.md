@@ -3,7 +3,7 @@
 
 
 
-### Strategy in flwr
+## Strategy in flwr
 - initialize_params
 : Input model's parameters(shape)
 
@@ -24,7 +24,7 @@
 Server에서의 Model Parameter(Global model Params)를 evaluate한다.
 
 
-### Vanilla Split Neural Network (SplitNN)
+## Vanilla Split Neural Network (SplitNN)
 
 - Step by Step <br>
 1. pick a model and a worker with data
@@ -37,7 +37,7 @@ Server에서의 Model Parameter(Global model Params)를 evaluate한다.
 5. Back propagation은 feed forward의 반대 방향으로 진행된다.
 
 
-### Vertical SplitNN
+## Vertical SplitNN
 
 - Vanilla SplitNN과 크게 다르지 않으나, Output을 출력하는 층에서 각 Client가 Worker을 거친 결과(Signal)을 병합하여 feed를 수행하는 점에서 차이가 존재한다.
 
@@ -45,7 +45,7 @@ Server에서의 Model Parameter(Global model Params)를 evaluate한다.
 Vertically Partitioned Data의 소유자를 Client라 하고, Output을 담당하는 하단 네트워크를 N개의 Segment로 분할하였다면, Worker의 수 = Client의 수 + N으로 볼 수 있다.
 
 
-### 연구 소개
+## 연구 소개
 Dataset : https://www.kaggle.com/competitions/acquire-valued-shoppers-challenge/data   
 Target : repeater - A boolean, If repeat purchase=1 else 0    
 Model : DNN(Relu + Sigmoid)   
@@ -60,9 +60,17 @@ Strategy : SplitVFL(Vertical SplitNN)
 Epoch : 10   
 Loss function : BCELoss   
 
-- **Success for Binary Classification, But Fail to Multi-Classification**
+[Appendix]
+- Client.py
+- Server.py
+- Strategy.py
+- utils.py
+- model.py
+- model_definition.json
+
 
 ![image](https://github.com/SS-yong/Federated-Learning/assets/108441950/2c15dc99-890c-4b6c-963e-d8bb94f81724)
 
+**Success for Binary Classification, But Fail to Multi-Classification**
 
 Reference from "https://github.com/Pedja-Djape/VFL_Kaggle_AVSC/tree/main"
