@@ -1,5 +1,7 @@
 # Vertical_Federated_Learning
-This purpose is study.
+- Purpose for study. <br>
+
+
 
 ### Strategy in flwr
 - initialize_params
